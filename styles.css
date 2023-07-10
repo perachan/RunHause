@@ -1,0 +1,199 @@
+/* Global definition */
+:root {
+    /* Object */
+    --primary-color: lightsalmon;
+    --secondary-color: teal;
+    --accent-color: yellow;
+
+    /* Text */
+    --primary-text: rgba(0, 0, 0, .88);
+    --secondary-text: rgba(0, 0, 0, .72);
+    --disabled-text: rgba(0, 0, 0, .56);
+    --placeholder-text: rgba(0, 0, 0, .40);
+
+    /* Space */
+    --space-small: .5rem;   /*8px*/
+    --space-regular: 1rem;  /*16px*/
+    --space-medium: 2rem;   /*32px*/
+    --space-large: 3rem;    /*48px*/
+    --space-extra: 4rem;    /*64px*/
+}
+
+/* /////////////////////////////////////////////////////////////// */
+
+/* Global definition */
+html{
+    font-family: 'Karla', sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: var(--primary-color);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.main{
+    padding: 8rem 4rem 0 4rem;
+}
+
+@media only screen and (max-width: 480px){
+    .main{
+        padding: 6rem 1rem 0 1rem;
+    }
+}
+
+.section{
+    display: flex;
+    flex: wrap;
+    width: 100%;
+    padding: var(--space-large) 0;
+}
+
+.gallery{
+    display: flex;
+    width: 100%;
+    flex: nowrap;
+    gap: var(--space-medium);
+    overflow: hidden;
+    padding-top: 2rem;
+}
+
+.gallery img{
+    flex: 1;
+    width: 20%;
+    border-radius: min(32px, 16%);
+}
+
+
+
+.image-container{
+    display: block;
+    overflow: hidden;
+}
+
+.tltle{
+    padding-bottom: 2rem;
+}
+
+/* ////////////////////////// Header ///////////////////////////// */
+header{
+    position: fixed;
+    display: flex;
+    width: calc(100% - 20rem);
+    height: 5rem;
+    justify-content: space-between;
+    align-content: center;
+    padding: 0 6rem;
+    margin: 2rem 4rem 0 4rem;
+    background-color: var(--secondary-color);
+    border-radius: 64px;
+    z-index: 100;
+}
+
+header .logo{
+    font-family: Caprasimo, sans-serif;
+    font-size: 3rem;
+    display: flex;
+    align-items: center;
+}
+
+header .desktop{
+    height: auto;
+    display: flex;
+    align-items: center;
+}
+
+header .mobile{
+    display: none;
+    height: auto;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile .menu-icon a{
+    display: flex;
+    flex: wrap;
+    flex-direction: column;
+    gap: 8px;
+    padding: 20px 8px;
+}
+.mobile .icon-line{
+    width: 32px;
+    height: 2px;
+    background-color: white;
+}
+
+header ul, header li, header a{
+    display: flex;
+    text-decoration: none;
+    color: white;
+    padding-left: var(--space-small);
+}
+
+@media only screen and (max-width: 480px){
+    header{
+        width: calc(100% - 4rem);
+        height: 4rem;
+        margin: 1rem 1rem 0 1rem;
+        padding: 0 1rem;
+    }
+
+    header .desktop{
+        display: none;
+    }
+
+    header .logo{
+        font-size: 2rem;
+    }
+
+    header .mobile{
+        display: block;
+    }
+}
+
+/* ////////////////////////// Event ///////////////////////////// */
+
+#event{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url('./resource/photo-1660751181828-6724e6beb2af.avif');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 70svh;
+    border-radius: min(32px, 16%);
+}
+
+.title-event{
+    text-align: center;
+    width: min(100%, 400px);
+    padding: var(--space-regular);
+    background-color: rgba(255,255,255,.8);
+}
+
+/* ////////////////////////// Meet up ///////////////////////////// */
+
+#meetup{
+    flex-direction: column;
+}
+
+/* ////////////////////////// Quote ///////////////////////////// */
+
+#quote{
+    background-color: var(--secondary-color);
+    padding: 4rem;
+    width: calc(100% - 8rem);
+    border-radius: min(32px, 16%);
+}
+
+#quote .title h2, #quote .title p{
+    color: var(--accent-color);
+    width: 50%;
+}
+
+/* ////////////////////////// Meet up ///////////////////////////// */
+
+  
